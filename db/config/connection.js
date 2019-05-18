@@ -11,15 +11,13 @@ const connection = mysql.createConnection({
   database: `${dbName}`
 })
 
-// Initiate MySQL Connection.
-const connect = () => {
-  connection.connect(err => {
-    if (err) {
-      console.error(`error connecting: ${err.stack}`)
-      return
-    }
-    console.log(`connected as id ${connection.threadId}`)
-  })
-}
+// Initiate MySQL Connection
+connection.connect(err => {
+  if (err) {
+    console.error(`error connecting: ${err.stack}`)
+    return
+  }
+  console.log(`connected as id ${connection.threadId}`)
+})
 
-module.export = connect
+module.export = connection

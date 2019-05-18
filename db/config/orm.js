@@ -2,16 +2,18 @@ const connection = require('./connection')
 
 const ORM = {
 
-  selectAll () {
+  selectAll: () => {
 
   },
 
-  insertOne () {
+  insertOne: () => {
 
   },
 
-  updateOne () {
+  updateOne: () => {
 
   }
 
 }
+
+module.exports = ORM
