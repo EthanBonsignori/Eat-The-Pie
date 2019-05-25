@@ -1,4 +1,4 @@
-USE pies_db
+USE pies_db;
 
 INSERT INTO pies (pie_name)
 values ('pi pie');

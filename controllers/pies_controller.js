@@ -12,14 +12,15 @@ router.get('/', (req, res) => {
     }
     console.log(hbsObj)
     res.render('index', hbsObj)
+    // res.json(hbsObj)
   })
 })
 
 // Insert new
 router.post('/api/pies', (req, res) => {
-  Pie.insertOne(['name', 'devoured'],
+  Pie.insertOne(['pie_name', 'devoured'],
     [req.body.name, req.body.devoured], (result) => {
-      res.json({ id: result.insertId })
+      res.status(201).json({ id: result.insertId }).end()
     })
 })
 
@@ -27,7 +28,9 @@ router.post('/api/pies', (req, res) => {
 router.put('/api/pies/:id', (req, res) => {
   const condition = `id = ${req.params.id}`
   console.log('condition', condition)
-
+  if (!req.body || !req.body.devoured) {
+    return res.status(400).end()
+  }
   Pie.updateOne({
     devoured: req.body.devoured
   }, condition, (result) => {
