@@ -15,7 +15,7 @@ body {
   font-family: 'Sniglet', cursive;
   font-size: 5rem;
   margin-top: -8rem;
-  color: rgb(255, 220, 20);
+  color: #ffc107;
   text-align: center;
 }
 
@@ -25,4 +25,23 @@ body {
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+}
+
+li.pie {
+  margin: 1rem;
+  padding: 0.5rem;
+  background: rgba(71, 154, 255, 0.3);
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.btn-sm {
+  color: white;
+  margin-top: 0.2rem;
+}
+
+.pie-name {
+  font-size: 1.5rem;
+  font-family: 'Sniglet', cursive;
+  margin-left: 0.5rem;
 }

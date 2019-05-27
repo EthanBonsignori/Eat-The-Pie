@@ -17,6 +17,12 @@ const Pie = {
     ORM.updateOne('pies', objColVals, condition, (res) => {
       cb(res)
     })
+  },
+
+  deleteOne: (condition, cb) => {
+    ORM.delete('pies', condition, (res) => {
+      cb(res)
+    })
   }
 }
 
