@@ -44,7 +44,7 @@ router.put('/api/pies/:id', (req, res) => {
 
 router.delete('/api/pies/:id', (req, res) => {
   const condition = `id = ${req.params.id}`
-
+  console.log('condition', condition)
   Pie.deleteOne(condition, (result) => {
     if (result.affectedRows === 0) {
       return res.status(404).end()

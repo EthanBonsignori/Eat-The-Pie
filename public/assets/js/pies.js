@@ -23,9 +23,8 @@ $(function () {
 
   $('.delete-pie').on('click', function (e) {
     const id = $(this).attr('id')
-
-    // Send the DELETE request.
-    $.ajax(`/api/cats/${id}`, {
+    // Send DELETE request
+    $.ajax(`/api/pies/${id}`, {
       type: 'DELETE'
     }).then(() => {
       console.log('Deleted pie:', id)

@@ -20,7 +20,7 @@ const Pie = {
   },
 
   deleteOne: (condition, cb) => {
-    ORM.delete('pies', condition, (res) => {
+    ORM.deleteOne('pies', condition, (res) => {
       cb(res)
     })
   }
