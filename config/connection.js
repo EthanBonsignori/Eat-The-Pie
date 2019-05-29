@@ -1,5 +1,5 @@
 const mysql = require('mysql')
-require('dotenv/config')
+require('dotenv').config()
 
 const dbName = 'pies_db'
 

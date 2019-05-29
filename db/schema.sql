@@ -3,8 +3,8 @@ CREATE DATABASE pies_db;
 USE pies_db;
 
 CREATE TABLE pies (
-	  id INT NOT NULL AUTO_INCREMENT,
+	  id INT AUTO_INCREMENT NOT NULL,
     pie_name VARCHAR(255) NULL,
     devoured BOOLEAN default false,
-    PRIMARY KEY (id)
+    PRIMARY KEY(id)
 );
