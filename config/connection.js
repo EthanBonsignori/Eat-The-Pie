@@ -1,4 +1,5 @@
 const mysql = require('mysql')
+require('dotenv/config')
 
 const dbName = 'pies_db'
 
@@ -7,7 +8,7 @@ const connection = mysql.createConnection({
   host: 'localhost',
   port: 3306,
   user: 'root',
-  password: 'kirby0077',
+  password: `${process.env.DB_PASS}`,
   database: `${dbName}`
 })
 
