@@ -26,7 +26,7 @@ $(function () {
     e.preventDefault()
 
     const newPie = {
-      pie_name: $('#pie-name').val().trim()
+      pie_name: $('#pie-name').val().trim().toLowerCase()
     }
     console.log('new pie', newPie)
     // Send POST request
@@ -35,7 +35,7 @@ $(function () {
       data: newPie
     }).then(() => {
       console.log('Created new pie!')
-      // window.location.reload()
+      window.location.reload()
     })
   })
 
