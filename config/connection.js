@@ -1,5 +1,4 @@
 const mysql = require('mysql')
-require('dotenv').config()
 
 const dbName = 'pies_db'
 
@@ -14,7 +13,7 @@ if (process.env.JASWB_URL) {
     host: 'localhost',
     port: 3306,
     user: 'root',
-    password: `${process.env.DB_PASS}`,
+    password: `root`,
     database: `${dbName}`
   })
 }
