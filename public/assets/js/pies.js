@@ -20,7 +20,7 @@ $(function () {
       window.location.reload()
     })
   })
-  
+
   // Create new pie form
   $('.pie-form').on('submit', function (e) {
     e.preventDefault()
