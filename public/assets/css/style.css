@@ -31,6 +31,10 @@ input[type=text] {
   width: 50%;
 }
 
+h1.text-center {
+  font-family: 'Sniglet', cursive;
+}
+
 li.pie {
   margin: 1rem;
   padding: 0.5rem;
