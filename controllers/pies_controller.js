@@ -18,10 +18,10 @@ router.get('/', (req, res) => {
 
 // Insert new
 router.post('/api/pies', (req, res) => {
-  Pie.insertOne(['pie_name', 'devoured'],
-    [req.body.name, req.body.devoured], (result) => {
-      res.status(201).json({ id: result.insertId }).end()
-    })
+  console.log(req.body.pie_name)
+  Pie.insertOne(['pie_name'], [req.body.pie_name], (result) => {
+    res.status(201).json({ id: result.insertId }).end()
+  })
 })
 
 // Update

@@ -20,7 +20,26 @@ $(function () {
       window.location.reload()
     })
   })
+  
+  // Create new pie form
+  $('.pie-form').on('submit', function (e) {
+    e.preventDefault()
 
+    const newPie = {
+      pie_name: $('#pie-name').val().trim()
+    }
+    console.log('new pie', newPie)
+    // Send POST request
+    $.ajax('/api/pies', {
+      type: 'POST',
+      data: newPie
+    }).then(() => {
+      console.log('Created new pie!')
+      // window.location.reload()
+    })
+  })
+
+  // Delete pie button
   $('.delete-pie').on('click', function (e) {
     const id = $(this).attr('id')
     // Send DELETE request
@@ -33,28 +52,3 @@ $(function () {
     })
   })
 })
-
-// // Document ready
-// $(function () {
-//   // Click listener for devour button
-//   $('.change-devoured').on('click', function (e) {
-//     const id = $(this).attr('id')
-//     const state = $(this).attr('state')
-
-//     const newDevouredState = {
-//       devoured: state
-//     }
-
-//     console.log(newDevouredState)
-//     // Send PUT request based on id
-//     window.fetch(`/api/pies/${id}`, {
-//       type: 'PUT',
-//       data: newDevouredState
-//     }).then((res) => {
-//       console.log(res)
-//       console.log('Devoured state changed to', state)
-//       // reload the page to get the updates
-//       window.location.reload()
-//     })
-//   })
-// })
