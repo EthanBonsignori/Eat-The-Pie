@@ -4,9 +4,9 @@ const dbName = 'pies_db'
 
 let connection
 
-if (process.env.JASWB_URL) {
+if (process.env.JAWSDB_URL) {
   // JawsDB connection settings
-  connection = mysql.createConnection(process.env.JASWB_URL)
+  connection = mysql.createConnection(process.env.JAWSDB_URL)
 } else {
   // MySQL DB connection settings
   connection = mysql.createConnection({
